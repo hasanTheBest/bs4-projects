@@ -1,0 +1,16 @@
+@import 'base/variable';
+@import 'base/grid';
+
+body{
+	background-color: $bg;
+	color: $color;
+}
+
+
+a{
+	color: #333;
+	transition:  all .3s ease;
+}
+a:hover{
+	color:  $bg;
+}

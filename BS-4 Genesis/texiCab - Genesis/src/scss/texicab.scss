@@ -1,0 +1,61 @@
+
+/* ***************** VARIABLE ********************* */
+
+
+/* ***************** MIXINS ********************* */
+@mixin mq-minw($min-w){
+	@media only screen and (min-width: $min-w){
+		@content;
+	}
+}
+@mixin mq-maxw($max-w){
+	@media only screen and (max-width: $max-w){
+		@content;
+	}
+}
+@mixin mq-maxh($max-h){
+	@media only screen and (max-height: $max-h){
+		@content;
+	}
+}
+@mixin mq($min-w, $max-w){
+	@media only screen and (min-width: $min-w) and (max-width: $max-w){
+		@content;
+	}
+}
+
+/* ***************** TYPOGRAPHY ********************* */
+@import 'base/texicab.font';
+@import 'base/typography/linear-interpolation';
+@import 'base/typography/map-sort';
+@import 'base/typography/list-sort';
+@import 'base/typography/list-remove';
+@import 'base/typography/poly-fluid-sizing';
+
+/* ***************** GENERIC ********************* */
+body {
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+  font-size: 18px;
+}
+h2 {
+  $map: (576px: 22px, 320px: 18px, 992px: 34px, 768px: 24px);     
+  @include poly-fluid-sizing('font-size', $map);
+}
+h1, h2, h3{
+	font-family: 'Berkshire Swash', cursive;
+}
+h4, h5, h6{
+	font-weight: 700;
+}
+.bg-img{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+small, .font_small {font-size: 0.667em;}
+
+/* ***************** 1.1 BANNER SECTION  ********************* */

@@ -1,0 +1,30 @@
+{
+  "name": "fasionecommerce",
+  "version": "1.0.0",
+  "description": "Fashion e-commerce website Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Fashion",
+    "e-commerce",
+    "bs4",
+    "responsive"
+  ],
+  "author": "M Hasan",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-csslint": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}

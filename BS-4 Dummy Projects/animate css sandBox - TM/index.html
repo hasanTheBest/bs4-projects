@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Latest Bootstrap 4 Starter Pack</title>
+
+        <style type="text/css" media="screen">
+        	#section1{
+        		animation-delay: 1s;
+        	}
+        	#section2{
+        		animation-delay: 2s;
+        	}
+        </style>
+    </head>
+
+    <body>
+
+    	<div class="container">
+    		<header class="animated slideInDown bg-info text-center text-white p-4">
+    			<h1 class="display-4 mb-0" id="anim-hdr">Animate.css Sandbox By TM</h1>
+    		</header>
+
+    		<section class="animated slideInLeft my-3 p-5 bg-dark text-muted" id="section1">
+				<h1 class="text-info mt-0 mb-4">Section One Header</h1>
+				<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem doloribus unde similique consectetur harum, dolor earum, dolores temporibus nisi, dolore voluptate ex molestiae. Vel saepe fugit a beatae dolorum consequatur itaque blanditiis necessitatibus, ratione laboriosam, architecto magnam ex tempore. Numquam beatae iste incidunt labore aspernatur dolorum eum, sint illum minima.</p>
+    		</section>
+
+    		<!-- <section class="animated slideInRight my-3 p-5 bg-dark text-muted" id="section2">
+    						<h1 class="text-info mt-0 mb-4">Section Two Header</h1>
+    						<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem doloribus unde similique consectetur harum, dolor earum, dolores temporibus nisi, dolore voluptate ex molestiae. Vel saepe fugit a beatae dolorum consequatur itaque blanditiis necessitatibus, ratione laboriosam, architecto magnam ex tempore. Numquam beatae iste incidunt labore aspernatur dolorum eum, sint illum minima.</p>
+    		</section> -->
+
+    		<section class="bg-light my-3 p-3 text-center">
+    			<button class="btn btn-outline-dark" id="btn1">Button 1</button>
+    			<button class="btn btn-outline-success" id="btn2">Button 2</button>
+    			<button class="btn btn-outline-secondary" id="btn2">Button 3</button>
+    		</section>
+    	</div>
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+        	$(function(){
+        		//trigger animate
+        		$('#btn1').click(function(){
+        			animateIt('#anim-hdr','bounce');
+        		})
+        		// animate
+        		function animateIt(element, animation){
+        			$(element).addClass('animated '+animation);
+
+        			var wait = setTimeout(function(){
+        				// remove class
+        				$(element).removeClass('animated '+animation);
+        			}, 1000);
+        		}
+        	});
+        </script>	
+    </body>
+</html>

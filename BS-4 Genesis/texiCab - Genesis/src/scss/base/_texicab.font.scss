@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'texicab';
+  src:  url('../fonts/texicab.eot?2s3jwd');
+  src:  url('../fonts/texicab.eot?2s3jwd#iefix') format('embedded-opentype'),
+    url('../fonts/texicab.ttf?2s3jwd') format('truetype'),
+    url('../fonts/texicab.woff?2s3jwd') format('woff'),
+    url('../fonts/texicab.svg?2s3jwd#texicab') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.tc {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'texicab' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tc-equalizer:before {
+  content: "\e900";
+}
+.tc-settings:before {
+  content: "\e900";
+}
+.tc-options:before {
+  content: "\e900";
+}
+.tc-menu:before {
+  content: "\e902";
+}
+.tc-menu2:before {
+  content: "\e903";
+}
+.tc-envelope-o:before {
+  content: "\f003";
+}
+.tc-star:before {
+  content: "\f005";
+}
+.tc-map-marker:before {
+  content: "\f041";
+}
+.tc-twitter:before {
+  content: "\f099";
+}
+.tc-facebook:before {
+  content: "\f09a";
+}
+.tc-facebook-f:before {
+  content: "\f09a";
+}
+.tc-globe:before {
+  content: "\f0ac";
+}
+.tc-google-plus:before {
+  content: "\f0d5";
+}
+.tc-mobile:before {
+  content: "\f10b";
+}
+.tc-mobile-phone:before {
+  content: "\f10b";
+}
+.tc-instagram:before {
+  content: "\f16d";
+}
+.tc-apple2:before {
+  content: "\f179";
+}
+.tc-android:before {
+  content: "\f17b";
+}
+.tc-bank:before {
+  content: "\f19c";
+}
+.tc-institution:before {
+  content: "\f19c";
+}
+.tc-university:before {
+  content: "\f19c";
+}
+.tc-hourglass-3:before {
+  content: "\f253";
+}
+.tc-hourglass-end:before {
+  content: "\f253";
+}
+.tc-apple:before {
+  content: "\e901";
+  color: #999;
+}
+.tc-googleplay:before {
+  content: "\e904";
+  color: #607d8b;
+}

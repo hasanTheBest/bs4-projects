@@ -1,0 +1,522 @@
+// Main Sass File
+$color-gray: rgb(103, 103, 103);
+$color-red: rgb(205, 10, 45);
+body{
+	font-size: 20px;
+    font-family: "Lato";
+    color: $color-gray;
+    line-height: 1.35; 
+    background-color: rgb(237,237,237);
+}
+.navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+nav.biker-navbar{
+	position: absolute;
+	top:40px;
+	z-index: 999;
+	width: 100%;
+	background-color: transparent !important;
+	color: white;
+	.nav-link{
+		color: #fff !important;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.navbar-brand{
+		font-size: 1.7rem;
+  		font-family: "Bebas";
+  		text-transform: uppercase;
+  		position: relative;
+  		font-weight: 700;
+  		line-height: 1;
+  		.text-red{
+  			color: $color-red;
+  			display: inline;
+  		}
+  		img{
+  			position: absolute;
+  			left: 50%;
+		    top: -100%;
+		    transform: rotate(-5deg);
+  		}
+  		.tagline{
+  			font-size: .5rem;
+		  font-family: "Montserrat";
+		  color: rgb(255, 255, 255);
+		  text-transform: uppercase;
+		  line-height: 1;
+		  text-align: center;
+		  font-weight: normal;
+		  text-shadow: 3.709px 1.498px 0px rgba(0, 0, 0, 0.078);
+		  display: block; 
+  		}
+	}
+	.social-nav{
+		.nav-itrem{
+			padding: 4px;
+		}
+		.nav-link{
+			width: 2.5rem;
+			height: 2.5rem;
+			border-radius: 50%;
+			border: 3px solid #fff;
+			background-color: transparent;
+			display: block;
+			text-align: center;
+			padding: 0;
+			.fa{
+				font-size: 1.2rem;
+				line-height: 2rem;
+			}
+		}
+	}
+}
+header.home{
+	background-color: rgb(0,0,0);
+	background-image: url(../img/banner_bg.png);
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	padding-top: 10rem;
+	padding-bottom: 2rem;
+	.banner{
+		&:before, &:after{
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		content: "";
+		}
+		&:after{
+			top: 0;
+			right: 0;
+			border-style: solid;
+	  		border-width: 0 500px 500px 0;
+	  		border-color: transparent $color-red transparent transparent;
+	  		z-index: -1;
+		}
+		&:before{
+			bottom: 0;
+			right: 0;
+			border-style: solid;
+	  		border-width: 0 0 300px 100vw;
+	  		border-color: transparent transparent white transparent;
+	  		z-index: -1;
+	  		
+
+		}
+	} /* end banner */
+	.banner-title{
+		h1{
+			color: #fff;
+		  font-family: "BillyOhio";
+		  color: rgb(255, 255, 255); 
+		  text-align: center;
+		  text-shadow: 3.709px 1.498px 0px rgba(0, 0, 0, 0.196);
+		  margin-bottom: 1rem;
+		}
+	} /* end banner-title */
+	
+} /* end home-sectio */
+
+.card-section, .travel-blog{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	.card-img{
+		position: relative;
+		&:before{
+			position: absolute;
+			bottom: -10px;
+			width: 0;
+			left: -10px;
+			height: 0;
+			content: "";
+			border-style: solid;
+	  		border-width: 0 10rem 10rem 0;
+	  		border-color:  transparent  transparent $color-red transparent;
+
+		}
+		.card-img-cap{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 3;
+			color: #fff;
+			font-weight: 600;
+			text-transform: uppercase;
+			.dollar	{
+				display: block;
+				font-size: 2rem;
+				line-height: 1;
+				small{
+					font-size: .6rem !important;
+				}
+
+			}
+			.person{
+				font-size: 1.1rem;
+				display: block;
+			}
+		}
+	}
+
+}
+
+.helmet-header{
+	h2{
+		font-size: 3.5rem;
+	  font-family: "BebasNeueBold";
+	  color: #000; 
+	  margin: .5rem 0rem;
+	  text-transform: uppercase;
+	  .text-red{
+	  	color: $color-red;
+	  }
+	}
+	.helmet-header-text{
+		font-family: "Lato";
+		font-size: 20px;
+	  color: rgb(93, 92, 92);
+	  text-align: center;
+	  max-width: 901.579px;
+	  margin-bottom: 2rem;
+	  margin-left: auto;
+	  margin-right: auto;
+
+	}
+}
+.helmet-person{
+	.traveller-box{
+		background-color: rgb(255, 255, 255);
+		max-width: 568px;
+		padding: 30px;
+		position: absolute;
+		bottom: 0;
+		left: auto;
+		right: auto;
+	}
+	.travaller{
+		margin-bottom: 2rem;
+		img{
+			width: 5rem;
+			height: 5rem;
+			border-radius: 50%; 
+		}
+		.traveller-intro{
+			text-transform: uppercase;
+			.name{
+				font-size: 2.2rem;
+				  font-family: "Bebas";
+				  color: rgb(33, 33, 33);
+				  line-height: 1;
+				  margin: 0;
+			}
+			.hobby{
+				font-size: 1.5rem;
+				  font-family: "BebasNeueBook";
+				  color: rgb(107, 107, 107);
+				  line-height: 1;
+			}
+		} 
+	}
+	.traveller-quote{
+		p{
+			font-size: 20px;
+		  font-family: "Lato";
+		  color: rgb(33, 33, 33);
+		  font-style: italic;
+		  line-height: 1.5;
+		  text-align: center;  
+		  max-width: 464.405px;
+		  margin-right: auto;
+		  margin-left: auto;
+		}
+	}
+
+}
+
+.tour-header{
+	h2{
+		font-size: 3.5rem;
+	  font-family: "BebasNeueBold";
+	  color: #000; 
+	  margin: .5rem 0rem;
+	  text-transform: uppercase;
+	  .text-red{
+	  	color: $color-red;
+	  }
+	}
+	.tour-header-text{
+		font-family: "Lato";
+		font-size: 20px;
+	  color: rgb(93, 92, 92);
+	  text-align: center;
+	  max-width: 901.579px;
+	  margin-bottom: 2rem;
+	  margin-left: auto;
+	  margin-right: auto;
+
+	}
+}
+
+.bike-tours{
+	.cruser-bike{
+		width: 25%;
+	}
+	span{display: block;}
+	.oneH{
+  		color: #fff;
+  		font-family: "BebasNeueBold";
+  		line-height: 1;
+  		text-transform: uppercase;
+		.km{	
+			font-size: 2.5rem;
+			small{
+				font-size: 1rem;
+			}
+		}
+		.days{
+			font-size: 1.5rem;
+		}
+	}
+	.ThreeTh{
+  		color: #fff;
+  		font-family: "BebasNeueBold";
+  		line-height: 1;
+  		text-transform: uppercase;
+		.km{	
+			font-size: 3.5rem;
+			small{
+				font-size: 2rem;
+			}
+		}
+		.days{
+			font-size: 2rem;
+		}
+	}
+
+	.countries-tours{
+		.countries{
+			text-align: center;
+			text-transform: uppercase;
+			font-family: "BebasNeueBold";
+		  	color: rgb(255, 255, 255);
+		  	line-height: 1;
+			.number{
+				font-size: 3.8rem;
+				  small{font-size: 2.8rem;}
+			}
+			.region{
+				font-size: 2.5rem;
+			}
+		}
+	}
+	.travel-text{
+		color: rgb(255, 255, 255);
+		font-size: 18px;
+		  line-height: 1.5;
+		  text-align: center;
+		  max-width: 548.443px;
+		  margin-left: auto;
+		  margin-right: auto;
+		  padding: 2.5rem;
+	}
+}
+
+.world-wide{
+	position: relative;
+	img{
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 999;
+	}
+	.left-red-bg{
+		background-color: $color-red;
+		h2{
+		font-size: 3rem;
+  		font-family: "BebasNeueBold";
+  		color: rgb(252, 251, 251);
+  		text-transform: uppercase;
+  		margin-bottom: .5rem;
+	}
+
+	
+	} 
+	.info-box{
+		color: #fff;
+		.info-title{
+			font-size: 2rem;
+			font-family: "HelveticaLTStd";
+			font-weight: bold;
+			 text-transform: uppercase;
+			 margin-bottom: .5rem;
+		}
+		.info-text{
+			font-size: 20px;
+		    font-family: "Lato";
+		    color: rgba(255, 255, 255, 0.439); 
+		    max-width: 447.484px;
+		    margin-bottom: 1.5rem;
+		}
+	}
+	
+	.biker-info{
+		background-color: #fff;
+		padding: .5rem;
+		.biker{
+			.biker-img{
+				width: 100%;
+				height: 100%;
+				img{
+					border-radius: 50%;
+					border: 2px solid $color-gray;
+					width: 5rem;
+					height: 5rem;
+				}
+			}
+			.biker-desc{
+				.biker-name{
+					font-size: 2.6rem;
+				  font-family: "BebasNeueBold";
+				  color: rgb(94, 94, 94); 
+			 	text-transform: uppercase;
+			 	display: inline-block;
+				}
+				.biker-subtitle{
+					font-size: 1.8rem;
+				  font-family: "BebasNeueBook";
+				  color: rgb(151, 151, 151);
+			 	text-transform: uppercase; 
+			 	display: inline-block;
+				}
+				.biker-speech{
+					 font-size: 20px;
+				  font-family: "Lato";
+				  color: rgba(4, 4, 4, 0.659);
+				  line-height: 1.5;
+				  max-width: 297.646px;
+				}
+			}
+		}
+	}
+}
+
+
+.bike-tours{
+	position: relative;
+	background-image: url(../img/bg_map.png);
+	background-size: cover;
+	background-position: center;
+	background-color: $color-gray;
+	img{
+		position: absolute;
+		bottom: -100px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 999;
+	}
+}
+
+.journey-section{ 
+	height: 432px;
+	width: 100%;
+	background-image: url(../img/tour_bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-color:  rgb(26, 25, 25); 
+	color: #fff;
+	position: relative;
+	&:after{
+		position: absolute;
+		 font-size: 41.667px;
+		  font-family: "FontAwesome";
+		  color: rgb(205, 10, 45);
+		  text-transform: uppercase;
+		  text-align: center; 
+		  content: "Location";
+		  left: 50%;
+		  bottom: 0;
+		  transform: translate(-50%, -50%);
+	}
+	.img-overlay{
+		width: 100%;
+		height: 100%;
+		background-color: rgba(15, 15, 15,.8);
+		.journey-header{
+			p{
+				 font-size: 20px;
+				  font-family: "Lato";
+				  color: rgb(254, 254, 254);
+				  line-height: 1.5;
+				  text-align: center; 
+				  max-width: 901.579px; 
+			}
+		}
+	}
+} /* stop journey-section */
+
+.contact-section{
+	.contact-box{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		.icon{
+			i.fa{
+				font-size: 3.5rem;
+				color: #000;
+			}
+		}
+		.icon-desc{
+			span{
+				display: block;
+			}
+			.icon-name{
+				 font-size: 3.5rem;
+				  font-family: "HelveticaLTStd";
+				  color: rgb(24, 24, 24);
+				  font-weight: bold; 
+			}
+			.desc{
+				font-size: 16px;
+				  font-family: "Lato";
+				  color: rgb(38, 38, 38);
+				  line-height: 1.5;
+			}
+		}
+	} /* end contact-box */
+
+	.social-link{
+		text-align: center;
+		width: 100%;
+		padding: 25px 0px;
+		.link-name{
+			display: inline-block;
+			margin: 7px;
+			width: 55px;
+			height: 55px;
+			border-radius: 50%;
+			border: 3px solid #a3b;
+			background-color: #fff;
+			line-height: 55px;
+			i.fa{
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+.main-footer{
+	  font-size: 17px;
+	  font-family: "Lato";
+	  color: rgb(255, 255, 255);
+	  line-height: 2.118; 
+	  background-color: $color-red; 
+	  padding: 25px 0px;
+	  p{
+	  	margin: 0;
+	  }
+}

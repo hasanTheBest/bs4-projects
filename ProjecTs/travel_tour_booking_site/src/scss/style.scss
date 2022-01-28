@@ -1,0 +1,94 @@
+/* ******************** VIRABLE ********************  */
+@import 'base/variables'; 
+
+/* ******************** MIXIN ********************  */
+/* breakpoints(xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px) */
+$xs: 0px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin mq-w($val, $limit: min ){
+  @media(#{$limit}-width: $val){
+    @content;
+  }
+}
+
+@mixin mq-h($val, $limit: max ){
+  @media(#{$limit}-height: $val){
+    @content;
+  }
+}
+
+/* ******************** GENERIC ********************  */
+html{
+	font-size: 12px;
+	@include mq-w($sm){
+		font-size: 13px;
+	}
+	@include mq-w($md){
+		font-size: 14px;
+	}
+	@include mq-w($lg){
+		font-size: 16px;
+	}
+	@include mq-w($xl){
+		font-size: 17px;
+	}
+}
+body{
+	background-color: $body-bg;
+	color: $color-text;
+}
+.bg-img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* ******************** BANNER SECTION ********************  */
+.banner-section{
+	min-height: 380px;
+	height: 100vh;
+	background-image: url(../img/banner.png);
+	background-color: #111;
+} 
+
+/* ******************** TRAVEL CARD SECTION ********************  */
+ .travel-card-section{
+ 	background-image: url(../img/city.png);
+ 	background-color: rgba(255,255,255,0.8);
+ }
+.sea-man{
+	.nav-pills{
+		.nav-link{
+			cursor: pointer;
+		}
+	}
+}
+/* ******************** HOTEL SECTION ********************  */
+ .hotel-section{
+ 	background-image: url(../img/mountain.png);
+ 	background-color: rgba(255,0,0,0.5);
+ 	.card-scale-lg{
+ 		transform: scale(1);
+ 		position: relative;
+ 		z-index: 3;
+ 		@include mq-w($md){
+			transform: scale(1.1);
+ 		}
+ 	}
+ }
+ .hotel-section-2{
+ 	background-image: url(../img/collacium.png);
+ 	background-color: rgba(255,255,255,0.6);	
+ }
+ .hotel-section-3{
+ 	background-image: url(../img/resort.jpg);
+ 	background-color: rgba(250,250,0,0.6);	
+ }
+ .hotel-section-4{
+ 	background-image: url(../img/collacium.png);
+ 	background-color: rgba(0,0,0,0.8);	
+ }

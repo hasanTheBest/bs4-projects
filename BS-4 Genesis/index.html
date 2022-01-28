@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Latest Bootstrap 4 Starter Pack</title>
+        
+        <style type="text/css" media="screen">
+
+/* educatin section */
+.main-timeline{
+    overflow: hidden;
+    position: relative;
+}
+.main-timeline .timeline{
+    position: relative;
+    margin-top: -79px;
+}
+.main-timeline .timeline:first-child{ margin-top: 0; }
+.main-timeline .timeline:before,
+.main-timeline .timeline:after{
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+.main-timeline .timeline:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    box-shadow: -8px 0 5px -5px rgba(0, 0, 0, 0.5) inset;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+.main-timeline .timeline-icon{
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 25px solid transparent;
+    border-top-color: #f44556;
+    border-right-color: #f44556;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+.main-timeline .year{
+    display: block;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    margin: auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f44556;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-45deg);
+}
+.main-timeline .timeline-content{
+    width: 35%;
+    float: right;
+    background: #f44556;
+    padding: 30px 20px;
+    margin: 50px 0;
+    z-index: 1;
+    position: relative;
+}
+.main-timeline .timeline-content:before{
+    content: "";
+    width: 20%;
+    height: 15px;
+    background: #f44556;
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+.main-timeline .title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+.main-timeline .description{
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(2n):before{ box-shadow: 8px 0 5px -5px rgba(0, 0, 0, 0.5) inset; }
+.main-timeline .timeline:nth-child(2n) .timeline-icon{ transform: rotate(-135deg); }
+.main-timeline .timeline:nth-child(2n) .year{ transform: rotate(135deg); }
+.main-timeline .timeline:nth-child(2n) .timeline-content{ float: left; }
+.main-timeline .timeline:nth-child(2n) .timeline-content:before{
+    left: auto;
+    right: -20%;
+}
+.main-timeline .timeline:nth-child(2n) .timeline-icon{
+    border-top-color: #e97e2e;
+    border-right-color: #e97e2e;
+}
+.main-timeline .timeline:nth-child(2n) .year{ color: #e97e2e; }
+.main-timeline .timeline:nth-child(2n) .timeline-content,
+.main-timeline .timeline:nth-child(2n) .timeline-content:before{ background: #e97e2e; }
+.main-timeline .timeline:nth-child(3n) .timeline-icon{
+    border-top-color: #13afae;
+    border-right-color: #13afae;
+}
+.main-timeline .timeline:nth-child(3n) .year{ color: #13afae; }
+.main-timeline .timeline:nth-child(3n) .timeline-content,
+.main-timeline .timeline:nth-child(3n) .timeline-content:before{ background: #13afae; }
+.main-timeline .timeline:nth-child(4n) .timeline-icon{
+    border-top-color: #105572;
+    border-right-color: #105572;
+}
+.main-timeline .timeline:nth-child(4n) .year{ color: #105572; }
+.main-timeline .timeline:nth-child(4n) .timeline-content,
+.main-timeline .timeline:nth-child(4n) .timeline-content:before{ background: #105572; }
+@media only screen and (max-width: 1199px){
+    .main-timeline .timeline{ margin-top: -103px; }
+    .main-timeline .timeline-content:before{ left: -18%; }
+    .main-timeline .timeline:nth-child(2n) .timeline-content:before{ right: -18%; }
+}
+@media only screen and (max-width: 990px){
+    .main-timeline .timeline{ margin-top: -127px; }
+    .main-timeline .timeline-content:before{ left: -2%; }
+    .main-timeline .timeline:nth-child(2n) .timeline-content:before{ right: -2%; }
+}
+@media only screen and (max-width: 767px){
+    .main-timeline .timeline{
+        margin-top: 0;
+        overflow: hidden;
+    }
+    .main-timeline .timeline:before,
+    .main-timeline .timeline:nth-child(2n):before{
+        box-shadow: none;
+    }
+    .main-timeline .timeline-icon,
+    .main-timeline .timeline:nth-child(2n) .timeline-icon{
+        margin-top: -30px;
+        margin-bottom: 20px;
+        position: relative;
+        transform: rotate(135deg);
+    }
+    .main-timeline .year,
+    .main-timeline .timeline:nth-child(2n) .year{ transform: rotate(-135deg); }
+    .main-timeline .timeline-content,
+    .main-timeline .timeline:nth-child(2n) .timeline-content{
+        width: 100%;
+        float: none;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        padding: 25px 20px;
+        margin: 0 auto;
+    }
+    .main-timeline .timeline-content:before,
+    .main-timeline .timeline:nth-child(2n) .timeline-content:before{
+        width: 15px;
+        height: 25px;
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%,0);
+    }
+}
+
+        /* education Section */
+        .education-page {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.education-page .education {
+  width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  padding: 20px 0px;
+  overflow: hidden;
+}
+.education-page .education:nth-child(2n) .education-icon {
+  float: right;
+  position: absolute;
+  left: 50%;
+  margin-left: 70px;
+}
+.education-page .education:nth-child(2n) .education-content {
+  float: left;
+  left: 0;
+  padding-left: 1rem;
+  padding-right: 69px;
+  text-align: right;
+}
+.education-page .education:nth-child(2n) .education-content:before {
+  left: 100%;
+}
+.education-page .education:nth-child(2n) .education-content:after {
+  left: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .education-page .education:nth-child(2n) .education-icon {
+    float: none;
+    left: 50%;
+    margin-left: -70px;
+    position: relative;
+  }
+  .education-page .education:nth-child(2n) .education-content {
+    text-align: center;
+  }
+  .education-page .education:nth-child(2n) .education-content:before, .education-page .education:nth-child(2n) .education-content:after {
+    top: 0;
+    left: 50%;
+  }
+}
+.education-page .education:after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  border: 2px solid transparent;
+  background-color: green;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+@media only screen and (max-width: 797px) {
+  .education-page .education:after {
+    display: none;
+  }
+}
+.education-page .education .education-icon {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  float: left;
+  left: 50%;
+  margin-left: -260px;
+}
+@media only screen and (max-width: 767px) {
+  .education-page .education .education-icon {
+    width: 140px;
+    height: 140px;
+  }
+}
+.education-page .education .education-icon .octagon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 9;
+  background-color: #ddd;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.education-page .education .education-icon .year {
+  z-index: 100;
+  position: relative;
+  margin-bottom: 0;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  line-height: 200px;
+}
+@media only screen and (max-width: 767px) {
+  .education-page .education .education-icon .year {
+    line-height: 140px;
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .education-page .education .education-icon {
+    float: none;
+    margin-bottom: 45px;
+    left: 50%;
+    margin-left: -70px;
+  }
+}
+.education-page .education .education-content {
+  width: 50%;
+  float: right;
+  background-color: azure;
+  padding: 1rem;
+  padding-left: 60px;
+  position: relative;
+}
+.education-page .education .education-content:before {
+  content: "";
+  width: 70px;
+  height: 8px;
+  background-color: #ddd;
+  position: absolute;
+  top: 100px;
+  left: -69px;
+}
+.education-page .education .education-content:after {
+  content: "+";
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  top: 100px;
+  border: 2px solid green;
+  margin-top: -8px;
+  margin-left: -8px;
+  z-index: 222;
+  color: green;
+  text-align: center;
+  line-height: 13px;
+  /* media srcen sizing */
+}
+@media only screen and (max-width: 767px) {
+  .education-page .education .education-content {
+    width: 100%;
+    float: none;
+    padding: 1.3em;
+    text-align: center;
+  }
+  .education-page .education .education-content:before, .education-page .education .education-content:after {
+    top: 0;
+    left: 50%;
+  }
+  .education-page .education .education-content:before {
+    width: 8px;
+    height: 70px;
+    margin-top: -70px;
+    margin-left: -2px;
+  }
+}
+
+    </style>
+   
+<body>
+
+
+<!-- education section -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline">
+                        <div class="timeline">
+                            <div class="timeline-icon"><span class="year">2018</span></div> <!-- /.timeline-icon -->
+                            <div class="timeline-content">
+                                <h3 class="title">Web Desginer</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+                                </p>
+                            </div> <!-- /.timeline-contnet -->
+                        </div> <!-- /.timeline -->
+                        <div class="timeline">
+                            <div class="timeline-icon"><span class="year">2018</span></div> <!-- /.timeline-icon -->
+                            <div class="timeline-content">
+                                <h3 class="title">Web Desginer</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+                                </p>
+                            </div> <!-- /.timeline-contnet -->
+                        </div> <!-- /.timeline -->
+                        <div class="timeline">
+                            <div class="timeline-icon"><span class="year">2018</span></div> <!-- /.timeline-icon -->
+                            <div class="timeline-content">
+                                <h3 class="title">Web Desginer</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+                                </p>
+                            </div> <!-- /.timeline-contnet -->
+                        </div> <!-- /.timeline -->
+                        <div class="timeline">
+                            <div class="timeline-icon"><span class="year">2017</span></div> <!-- /.timeline-icon -->
+                            <div class="timeline-content">
+                                <h3 class="title">Web Developer</h3>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+                                </p>
+                            </div> <!-- /.timeline-content -->
+                        </div> <!-- /.timeline -->
+                    </div> <!-- /.main-timeline -->
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="education-page">
+        <div class="education">
+          <div class="education-icon"><span class="year">2016</span>
+            <div class="octagon"></div>
+          </div>
+          <div class="education-content">
+            <h2 class="tc-header">Graphic Desgin</h2>
+            <p class="tc-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores vitae ad facere, cum doloremque, saepe quae sit veniam amet nesciunt suscipit laboriosam, distinctio soluta?</p>
+          </div>
+        </div>
+        <div class="education">
+          <div class="education-icon"><span class="year">2016</span>
+            <div class="octagon"></div>
+          </div>
+          <div class="education-content">
+            <h2 class="tc-header">Web Desgin</h2>
+            <p class="tc-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores vitae ad facere, cum doloremque, saepe quae sit veniam amet nesciunt suscipit laboriosam, distinctio soluta?</p>
+          </div>
+        </div>
+        <div class="education">
+          <div class="education-icon"><span class="year">2017</span>
+            <div class="octagon"></div>
+          </div>
+          <div class="education-content">
+            <h2 class="tc-header">Frontend Developer</h2>
+            <p class="tc-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores vitae ad facere, cum doloremque, saepe quae sit veniam amet nesciunt suscipit laboriosam, distinctio soluta?</p>
+          </div>
+        </div>
+        <div class="education">
+          <div class="education-icon"><span class="year">2018</span>
+            <div class="octagon"></div>
+          </div>
+          <div class="education-content">
+            <h2 class="tc-header">Wordpress Theme Developer</h2>
+            <p class="tc-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores vitae ad facere, cum doloremque, saepe quae sit veniam amet nesciunt suscipit laboriosam, distinctio soluta?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

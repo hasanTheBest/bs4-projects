@@ -1,0 +1,444 @@
+/*!
+ * Fashion e-commerce Template v1.0.0 (https://mahmudmeet.000webhostapp.com/fashion/)
+ * Copyright 2018 -Mahmudul Hasan
+ */
+
+/* ================== VARIABLE ================= */
+$primary-color: rgb(0, 183, 217);
+$secondary-color: rgba(175, 175, 175, 0.502);
+$font-color-dark: rgb(23, 23, 23);
+$font-color-gray: rgb(45, 43, 39);
+$font-color-gray-light: rgb(83, 83, 83);
+$font-color: rgb(114, 114, 114);
+$font-color-light: rgb(125, 125, 125);
+$white-color: #fff;
+
+/* ================== MIXINS ================= */
+@mixin mq($min-w){
+	@media only screen and (min-width: $min-w){
+		@content;
+	}
+}
+
+/* ================== INCLUDE ================= */
+@import 'base/font-style';
+
+/* ================== GENERIC STYLE ================= */
+body{
+	font-family: "Open Sans";
+	font-size: 14px;
+	line-height: 1.6;
+	color: $font-color;
+}
+h1, h2, h3, h4, h5, h6{
+	color: $font-color-gray;
+	line-height: 1.2; 
+	font-weight: bold;
+	font-family: "Montserrat";
+  	text-transform: uppercase; 
+}
+.btn{
+	background-color: $font-color-light;
+	border-radius: 1.5rem;
+	border: 1px solid $font-color;
+	display: block;
+} 
+.bg-img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.nav-link{
+	color: $font-color-dark;
+	font-weight: 600;
+	font-size: 16px;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	transition: color .2s;
+	&:hover{
+		color: $primary-color;
+	}
+}
+
+/* ================== NAVIGATION STYLE ================= */
+.navbar.fashion-navbar{
+	.nav-item{
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	@at-root{
+		.navbar-brand{
+			h4{
+				line-height: 1;
+				font-size: 35px;
+				color: $font-color-gray;
+			}
+			small{
+				line-height: 1;
+				font-size: 16px;
+				display: block;
+				letter-spacing: 3px;
+				font-weight: bold;
+				color: $font-color-gray-light;
+			}
+			transition: color .3s;
+			&:hover, &:focus{
+				h4, small{
+					color: $primary-color
+				}
+			}
+		} /* /.navbar-brand */
+	} /* /.at-root */
+
+	.navbar-toggler{
+		transition: all .2s;
+		&:focus, &:hover{
+			color: $primary-color;
+			border-color: $primary-color;
+		}
+	} /* /.navbar-toggler */
+
+	.fashion-navbar-form{
+		button{
+			background-color: transparent;
+			transition: .2s color;
+			border: 1px solid transparent;
+			padding-left: .5rem;
+			margin-left: 1rem;
+			font-size: 20px;
+			&:focus, &:hover{
+				color: $primary-color;
+			}
+		}
+	} /* /.fashion-navbar-form */
+} /* /.navbar.fashion-navbar */
+
+/* ================== HERO / BANNER SECTION ================= */
+.hero-section{}
+.hero-area{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: block;
+	.social-nav-container{
+		position: absolute;
+		left: -7px;
+		top: 0;
+		width: 30px;
+		height: 100%;
+		background-color: $white-color;
+		display: block;
+		transform-origin: top left;
+		.nav.social-nav{
+			.nav-item{
+				margin: 0;
+				padding: 0;
+				.nav-link{
+					display: block;
+					width: 30px;
+					margin-top: .5em;
+					margin-bottom: .6em;
+					padding-right: 0;
+					padding-left: 0;
+					text-align: center;
+					padding-top: .5em;
+					padding-bottom: .5em;
+				}
+			}
+			.nav-item:last-child{
+				transform: rotate(-90deg);
+				width: 80px;
+				font-size: 12px;
+				transform-origin: top left;
+				display: block;
+				position: relative;
+				top: 70px;
+			}
+		} /* .nav.social-nav */
+	} /* /.social-nav-container */
+
+	.hero-content{
+		background-image: url('../../img/hero.jpg');
+		background-color: $secondary-color;
+		display: block;
+		margin-left: 30px;
+		padding: 14px;
+		height: 600px; 
+		.reaction-icon-container{
+			.fe{
+				width: 45px;
+				color: $font-color-dark;
+				height: 45px;
+				line-height: 45px;
+				font-size: 18px;
+				border: 1px solid $font-color-dark;
+				border-radius: 50%;
+				text-align: center;
+				background-color: $white-color;
+				margin: .5rem;
+				transition: color .2s, background-color .4s;
+				&:focus, &:hover{
+					color: $primary-color;
+					background-color: $font-color-dark;
+					border-color: $primary-color;
+				} 
+			}
+		} /* /.reaction-icon-container */
+		.hero-txt{
+			max-width: 250px;
+			@include mq(1344px){
+				max-width: 350px;
+			}
+			@include mq(1600px){
+				max-width: 480px;
+			}
+
+		}
+	} /* /.hero-content */
+
+	.hero-offer-content{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		display: block;
+		overflow: hidden;
+		height: 65%;
+		background-color: $font-color-gray-light;
+		.offer-price-container{
+			.price{
+				color: $font-color-dark;
+				del{
+					font-size: 20px;
+					margin-right: 1rem;
+				}
+				strong{
+					font-size: 	26px;
+				}
+			}
+		} /* /.offer-price-container */
+
+		.offer-time-container{
+			.time-content{
+				background-color: $white-color;
+				color: $font-color-gray;
+				border-radius: 20px;
+				& > span {display: block;}
+				.time-counter{
+					font-size: 26px;
+					font-weight: 700;
+				}
+				.time-term{
+					font-size: 18px;
+					font-weight: 600;
+				}
+			}
+		} /* .offer-time-container */
+	} /* /.hero-offer-content */
+
+} /* /.hero-area */
+
+/* ================== LATEST PRODUCT SECTION ================= */
+.product-row{
+	height: 52.4vw;
+	min-height: 520px;
+	max-ehight: 700px;
+	div[class*="item-"]{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+	}
+	.product-img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	 
+	.product-badge{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		text-align: center;
+		z-index: 1;
+		padding: 1rem;
+		color: $font-color-gray;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 500;
+		&.product-badge-left{
+			top: 50%;
+			transform: translateY(-50%);
+			padding-left: 1.5rem;
+			text-align: left; 
+			bottom: auto !important;
+			.product-name{
+				margin-bottom: 1rem;
+				display: block;
+				text-transform: capitalize;
+			}
+			.product-title{
+				margin-bottom: 1.5rem;
+			}
+			.btn.btn-shop{
+				background-color: $font-color-dark;
+				color: $font-color-light;
+				text-transform: uppercase;
+				font-size: .9rem;
+			}
+		}
+	} /* /.product-badge */
+	.item-sm:first-child{
+		.product-img{
+			height: 95%;
+		}
+		.product-badge{
+			bottom: 5%;
+		}
+	}
+	.product-tag{
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background-color: $font-color-dark;
+		color: $font-color-light;
+		padding: .4rem .8rem;
+		&:after{
+			position: absolute;
+			left: 0;
+			bottom: -18px;
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 18px 12px 0 0;
+			border-color: $font-color-dark transparent transparent
+		}
+	} /* /.product-tag */	
+} /* /.product-row */
+
+.product-discount{
+	background-image: url("../../img/offer.jpg");
+	background-color: $primary-color;
+	color: $font-color-gray-light;
+	.offer-subtitle{
+		letter-spacing: 5px;
+	}
+	.btn.offer-btn{
+		background-color: $white-color;
+		border: 1px solid transparent;
+		padding: 1rem 2rem;
+		border-radius: 2rem;
+	}
+}
+/* ================== CAROUSLE 	GENERIC STYLE ================= */
+.owl-theme .owl-nav {
+	margin-top: 0px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+	position: absolute;
+	border: 1px solid $font-color-dark;
+	padding: 0 !important;
+	font: inherit;
+	background-color: transparent;
+	color: $font-color-dark;
+	font-weight: 500;
+	line-height: 50px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+}
+.owl-carousel .owl-nav button.owl-prev{
+	transform: rotate(-90deg);
+}
+.owl-carousel .owl-nav button.owl-next{
+	transform: rotate(90deg);
+}
+.owl-carousel .owl-nav button.owl-next{
+	right: 0;
+	right: -55px;
+}
+.owl-carousel .owl-nav button.owl-prev{
+	top: -50%;
+	left: -55px;
+}
+.owl-carousel .owl-nav button span:not([class*="btn-txt"]){
+	display: none;
+}
+.owl-carousel .owl-nav button span.btn-txt{
+	
+}
+
+/* ================== FASHION CAROUSLE SECTION ================= */
+.showcase-carousel{
+	.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+		border: none;
+		background-color: $font-color-light;
+		line-height: 35px;
+		width: 60px;
+		height: 35px;
+		border-radius: 5px;
+		transform: rotate(90deg);
+	}
+	.owl-carousel .owl-nav button span.btn-txt{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		transform: rotate(-180deg); 
+	}
+}
+
+
+/* ================== NESLETTER SECTION ================= */
+.newslatter-section{
+	background-image: url("../../img/hip.jpg");
+	background-color: $secondary-color;
+}
+
+/* ================== BLOG SECTION ================= */
+.blog-section{
+	background-color: $white-color;
+	display: block;
+	.blog-img-container{
+		z-index: 2;
+	}
+	.blog-box {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: -2rem;
+		z-index: 5;
+		padding: 1rem;
+		display: block;
+		position: relative;
+	}
+}
+
+/* ================== CONTACT SECTION ================= */
+.contact-section{
+	background-color: $secondary-color;
+	.nav-link{
+		color: inherit;
+	}
+}
+
+/* ================== FOOTER SECTION ================= */
+footer{
+	.navbar-brand{
+		width: 220px;
+		margin: auto;
+	}
+}

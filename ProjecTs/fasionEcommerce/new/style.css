@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'fashion-ecommerce';
+  src:  url('fonts/fashion-ecommerce.eot?mov4dj');
+  src:  url('fonts/fashion-ecommerce.eot?mov4dj#iefix') format('embedded-opentype'),
+    url('fonts/fashion-ecommerce.ttf?mov4dj') format('truetype'),
+    url('fonts/fashion-ecommerce.woff?mov4dj') format('woff'),
+    url('fonts/fashion-ecommerce.svg?mov4dj#fashion-ecommerce') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fe {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fashion-ecommerce' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fe-usb:before {
+  content: "\e900";
+}
+.fe-heart:before {
+  content: "\e901";
+}
+.fe-menu:before {
+  content: "\e902";
+}
+.fe-search:before {
+  content: "\e903";
+}
+.fe-keyboard_arrow_right:before {
+  content: "\e904";
+}
+.fe-lock-closed:before {
+  content: "\e905";
+}
+.fe-google-plus:before {
+  content: "\ea8b";
+}
+.fe-facebook:before {
+  content: "\ea90";
+}
+.fe-instagram:before {
+  content: "\ea92";
+}
+.fe-twitter:before {
+  content: "\ea96";
+}
